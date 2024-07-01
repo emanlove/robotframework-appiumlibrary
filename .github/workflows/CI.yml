@@ -27,7 +27,7 @@ jobs:
         with:
           python-version: 3.9
           cache: 'pip'
-          cache-dependency-path: **/setup.py
+          cache-dependency-path: rf-al/setup.py
 
       - name: Install Appium
         run: npm install -g appium
