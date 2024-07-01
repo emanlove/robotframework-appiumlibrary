@@ -25,7 +25,7 @@ jobs:
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
         with:
-          packages: "emulator;34.2.15"
+          packages: 'emulator'
 
       - name: Use Python 3.9
         uses: actions/setup-python@v5
