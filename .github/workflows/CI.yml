@@ -28,9 +28,7 @@ jobs:
           log-accepted-android-sdk-licenses: 'false'
 
       - name: Install additional Android SDK Packages
-        run: |
-#          sdkmanager --list | grep emulator
-          sdkmanager 'emulator'
+        run: sdkmanager 'emulator'
 
       - name: Use Python 3.9
         uses: actions/setup-python@v5
