@@ -57,6 +57,7 @@ jobs:
       - name: Start up adb
         run: |
           adb start-server
+          sdkmanager --list_installed
           emulator -list-avds
           emulator -avd Pixel_3a_API_34_extension_level_7_arm64-v8a
 
