@@ -65,11 +65,12 @@ jobs:
         run: |
           adb start-server
           which avdmanager
-          avdmanager -v create avd -n Pixel_3a_API_34 -k "system-images;android-34;google_apis;x86_64" -d pixel_3a
+          avdmanager list avd
           echo -------
           emulator -list-avds
           echo -------
           emulator -avd Pixel_3a_API_34
+#          avdmanager -v create avd -n Pixel_3a_API_34 -k "system-images;android-34;google_apis;x86_64" -d pixel_3a
 
       - name: Checkout Eficode course
         uses: actions/checkout@v3
