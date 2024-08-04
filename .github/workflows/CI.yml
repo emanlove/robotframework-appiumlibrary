@@ -62,8 +62,8 @@ jobs:
 
       - name: Start up adb
         run: |
-          avdmanager -v create avd -n Pixel_3a_API_34 -k "system-images;android-34;google_apis;x86_64" -d pixel_3a
           adb start-server
+          avdmanager -v create avd -n Pixel_3a_API_34 -k "system-images;android-34;google_apis;x86_64" -d pixel_3a
           echo -------
           emulator -list-avds
           echo -------
