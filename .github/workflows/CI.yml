@@ -60,7 +60,7 @@ jobs:
           sdkmanager --channel=0 "system-images;android-34;google_apis;x86_64"
           sdkmanager --list_installed
       - name: Create AVD
-        run: |
+        run:
           avdmanager -v create avd -n Pixel_3a_API_34 -k "system-images;android-34;google_apis;x86_64" -d pixel_a
       - name: Start up adb
         run: |
