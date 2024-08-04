@@ -31,6 +31,7 @@ jobs:
         run: |
           sdkmanager 'emulator'
           echo "$ANDROID_SDK_ROOT/emulator" >> $GITHUB_PATH
+          sdkmanager --list_installed
 
       - name: Debug Android SDK Install
         run: |
@@ -63,6 +64,7 @@ jobs:
       - name: Start up adb
         run: |
           adb start-server
+          which avdmanager
           avdmanager -v create avd -n Pixel_3a_API_34 -k "system-images;android-34;google_apis;x86_64" -d pixel_3a
           echo -------
           emulator -list-avds
