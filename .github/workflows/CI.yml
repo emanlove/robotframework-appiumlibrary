@@ -67,7 +67,7 @@ jobs:
           which avdmanager
           avdmanager -v list avd
           avdmanager --help
-          avdmanager -v create avd -n Pixel_3a_API_34 -k "system-images;android-34;google_apis;x86_64"
+          avdmanager -v create avd -n Pixel_3a_API_34 -k "system-images;android-34;google_apis;x86_64" -d pixel_3a
           echo -------
           emulator -list-avds
           echo -------
