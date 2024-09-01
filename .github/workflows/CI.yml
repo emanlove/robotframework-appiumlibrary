@@ -71,7 +71,7 @@ jobs:
           echo -------
           emulator -list-avds
           echo -------
-          emulator -avd Pixel_3a_API_34
+          emulator -avd Pixel_3a_API_34 no-snapshot -no-window -gpu swiftshader_indirect -noaudio &
 #          avdmanager -v create avd -n Pixel_3a_API_34 -k "system-images;android-34;google_apis;x86_64" -d pixel_3a
 
       - name: Checkout Eficode course
