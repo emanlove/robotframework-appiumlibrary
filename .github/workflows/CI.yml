@@ -56,8 +56,6 @@ jobs:
           nohup appium --log-timestamp --log-no-colors > appium.log &
           appium driver install uiautomator2
           appium driver doctor uiautomator2
-#         nohup appium --use-plugins=images,execute-driver --relaxed-security --log-timestamp --log-no-colors > appium.log &
-#         appium
       - name: Install system-images via SDKManager
         run: |
           sdkmanager --channel=0 "system-images;android-34;google_apis;arm64-v8a"
