@@ -80,7 +80,7 @@ jobs:
       - name: Debug emulator avds
         run: |
           avdmanager list avd
-          emulator --help-all -avd Pixel_3a_API_34
+          emulator --help-all -avd Pixel_3a_API_34 -datadir /home/runner/.android/avd
 
       - name: Checkout Eficode course
         uses: actions/checkout@v3
