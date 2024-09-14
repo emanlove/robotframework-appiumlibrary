@@ -79,8 +79,7 @@ jobs:
 
       - name: Debug emulator avds
         run: |
-          emulator --help
-          emulator --version
+          emulator --help-all
 
       - name: Checkout Eficode course
         uses: actions/checkout@v3
