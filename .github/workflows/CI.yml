@@ -68,16 +68,19 @@ jobs:
           sudo udevadm control --reload-rules
           sudo udevadm trigger --name-match=kvm
 
-      - name: Start up adb
+      - name: Start up adb server
         run: |
           adb start-server
           which avdmanager
-          avdmanager -v list avd
-          avdmanager --help
-          avdmanager -v create avd -n Pixel_3a_API_34 -k "system-images;android-34;google_apis;x86_64" -d pixel_3a
-          echo -------
-          emulator -list-avds
-          echo -------
+
+      - name: Debug list avds known by avdmanager
+        run: avdmanager -v list avd
+
+      - name: Create avd image
+        run: avdmanager -v create avd -n Pixel_3a_API_34 -k "system-images;android-34;google_apis;x86_64" -d pixel_3a
+
+      - name: Debig emulator avds
+        run: emulator -list-avds
 
       - name: Checkout Eficode course
         uses: actions/checkout@v3
