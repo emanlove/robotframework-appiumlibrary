@@ -79,7 +79,7 @@ jobs:
 
       - name: Debug emulator avds
         run: |
-          emulator --help-all
+          emulator --help-all -avd Pixel_3a_API_34
 
       - name: Checkout Eficode course
         uses: actions/checkout@v3
