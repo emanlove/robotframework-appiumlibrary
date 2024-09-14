@@ -79,6 +79,7 @@ jobs:
 
       - name: Debug emulator avds
         run: |
+          avdmanager list avd
           emulator --help-all -avd Pixel_3a_API_34
 
       - name: Checkout Eficode course
