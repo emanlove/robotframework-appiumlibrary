@@ -62,6 +62,12 @@ jobs:
           sdkmanager --channel=0 "system-images;android-34;google_apis;x86_64"
           sdkmanager --list_installed
 
+      - name: Enable KVM group perms
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+
       - name: Start up adb
         run: |
           adb start-server
