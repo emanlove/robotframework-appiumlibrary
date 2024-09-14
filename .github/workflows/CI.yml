@@ -69,9 +69,7 @@ jobs:
           sudo udevadm trigger --name-match=kvm
 
       - name: Start up adb server
-        run: |
-          adb start-server
-          which avdmanager
+        run: adb start-server
 
       - name: Debug list avds known by avdmanager
         run: avdmanager -v list avd
