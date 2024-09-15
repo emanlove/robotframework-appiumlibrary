@@ -81,7 +81,7 @@ jobs:
         run: |
           ls $HOME/.android/avd/
           avdmanager list avd
-          emulator --help-all -avd Pixel_3a_API_34 
+          emulator @Pixel_3a_API_34 
 
       - name: Checkout Eficode course
         uses: actions/checkout@v3
