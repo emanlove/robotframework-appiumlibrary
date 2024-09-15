@@ -79,8 +79,9 @@ jobs:
 
       - name: Debug emulator avds
         run: |
-          cp /home/runner/.android/avd/* $ANDROID_HOME/.android/avd/.
-          ls $ANDROID_HOME/.android/avd/
+          mkdir -p $HOME/.android/avd
+          cp /home/runner/.android/avd/* $HOME/.android/avd/.
+          ls $HOME/.android/avd/
           avdmanager list avd
           emulator --help-all -avd Pixel_3a_API_34 
 
